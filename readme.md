@@ -19,4 +19,4 @@ so the href link used in
    {{ partial "image" (dict "Src" $img1 "Alt" "Image 01" "Size" "200x200" "Loading" "eager" "Class" "mx-auto lg:!max-w-[800px]" ) }}
 </a>
 ```
-points to /images/post01/img01.jpg, which isn't availabel in the output (public)
+points to /images/post01/img01.jpg, which isn't available in the output (public)
