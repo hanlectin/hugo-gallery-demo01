@@ -1,0 +1,41 @@
+<!-- layouts/shortcodes/imagegrid.html -->
+
+{{ $img1 := .Get "img1" }}
+{{ $img2 := .Get "img2" }}
+{{ $img3 := .Get "img3" }}
+
+<style>
+  /* Set the default style for the image */
+.image-zoom {
+  transition: transform 0.2s; /* Add a smooth transition effect */
+}
+
+/* On hover, zoom into the image by 5% */
+.image-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* Change the cursor to a magnifying glass on hover */
+.image-zoom:hover {
+  cursor: zoom-in;
+}
+</style>
+
+<!-- use Lightbox2 for image-preview -->
+<div class="grid grid-cols-3 gap-0">
+      <div>
+        <a href="{{ $img1 }}" data-lightbox="image-set" data-title="Image 1">
+          <img src="{{ $img1 }}" alt="Image 1" class="image-zoom">        
+        </a>      
+      </div>
+      <div>
+        <a href="{{ $img2 }}" data-lightbox="image-set" data-title="Image 2">
+          <img src="{{ $img2 }}" alt="Image 2" class="image-zoom">        
+        </a>
+      </div>
+      <div>
+        <a href="{{ $img3 }}" data-lightbox="image-set" data-title="Image 3">
+          <img src="{{ $img3 }}" alt="Image 3" class="image-zoom">        
+        </a>
+      </div>
+</div>

@@ -1,0 +1,43 @@
+<!-- layouts/shortcodes/imagegrid.html -->
+
+{{ $img1 := .Get "img1" }}
+{{ $img2 := .Get "img2" }}
+{{ $img3 := .Get "img3" }}
+
+<style>
+  /* Set the default style for the image */
+.image-zoom {
+  transition: transform 0.2s; /* Add a smooth transition effect */
+}
+
+/* On hover, zoom into the image by 5% */
+.image-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* Change the cursor to a magnifying glass on hover */
+.image-zoom:hover {
+  cursor: zoom-in;
+}
+</style>
+
+<!-- use Lightbox2 for image-preview -->
+<div class="grid grid-cols-3 gap-0">
+      <div>
+        {{/*  <img src="{{ $img1 }}"><img>  */}}
+        <a href="{{ $img1 }}" data-lightbox="image-set1" data-title="Image 1">
+        {{ partial "image" (dict "Src" $img1 "Alt" "Image 01" "Size" "200x200" "Loading" "eager" "Class" "mx-auto lg:!max-w-[800px] image-zoom" ) }}
+        </a>
+        
+      </div>
+      <div>
+        <a href="{{ $img2 }}" data-lightbox="image-set1" data-title="Image 2">
+          {{ partial "image" (dict "Src" $img2 "Alt" "Image 02" "Size" "200x200" "Loading" "eager" "Class" "mx-auto lg:!max-w-[800px] image-zoom" ) }}
+        </a>
+      </div>
+      <div>
+        <a href="{{ $img3 }}" data-lightbox="image-set1" data-title="Image 3">
+          {{ partial "image" (dict "Src" $img3 "Alt" "Image 03" "Size" "200x200" "Loading" "eager" "Class" "mx-auto lg:!max-w-[800px] image-zoom" ) }}
+        </a>
+      </div>
+</div>

@@ -1,0 +1,71 @@
+############# English navigation ##############
+
+# main menu
+[[main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[main]]
+name = "News"
+url = "/#news"
+weight = 2
+
+[[main]]
+name = "Contact"
+url = "contact/"
+weight = 3
+
+
+[[main]]
+weight = 4
+name = "x"
+hasChildren = true
+
+[[main]]
+parent = "x"
+name = "Blog"
+url = "blog/"
+
+[[main]]
+parent = "x"
+name = "Contact2"
+url = "contact/"
+
+[[main]]
+parent = "x"
+name = "Authors"
+url = "authors/"
+
+[[main]]
+parent = "x"
+name = "Categories"
+url = "categories/"
+
+[[main]]
+parent = "x"
+name = "404 Page"
+#url = "404/"
+url = "404.html" #HALE
+
+[[main]]
+name = "x"
+url = "elements/"
+
+
+
+# footer menu
+[[footer]]
+name = "About"
+url = "about/"
+weight = 1
+
+[[footer]]
+name = "Elements"
+url = "elements/"
+weight = 2
+
+[[footer]]
+name = "Imprint"
+url = "privacy-policy/"
+weight = 3
